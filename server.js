@@ -4,7 +4,6 @@ const path = require("path")
 const methodOverride = require('method-override');
 require("./config/associations")
 var session = require("express-session")
-var flash = require("connect-flash")
 const passport = require("passport")
 require("./security/authentication")(passport)
 
@@ -19,12 +18,8 @@ server.use(session({
 }))
 server.use(passport.initialize())
 server.use(passport.session())
-server.use(flash())
 
 server.use((req,res, next) => {
-    res.locals.success_msg = req.flash("success_msg")
-    res.locals.error_msg = req.flash("error_msg")
-    res.locals.error = req.flash("error")
     res.locals.user = req.user || null
     next()
 })
