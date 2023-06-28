@@ -24,6 +24,7 @@ server.use((req,res, next) => {
     next()
 })
 
+
 //criando um middleware para que substitua requisições POST ou GET por outras quando a URL possui "_method"
 server.use(methodOverride("_method",{methods:["POST","GET"]}));
 
