@@ -5,7 +5,7 @@ const methodOverride = require('method-override');
 require("./config/associations")
 var session = require("express-session")
 const passport = require("passport")
-require("./security/authentication")(passport)
+require("./security/authentication")(passport) 
 
 const server = express()
 const port = process.env.PORT || 3000; 
