@@ -10,7 +10,7 @@ require("./security/authentication")(passport)
 const server = express()
 const port = process.env.PORT || 3000; 
 
-server.use(session({
+server.use(session({ 
     secret: process.env.SECRET,  //Chave secreta utilizada para assinar as sessões, garantindo a integridade e segurança das mesmas   
     resave: false, //Determina se a sessão deve ser regravada no armazenamento, mesmo que não tenha sido modificada
     saveUninitialized: true, //Define se a sessão deve ser salva no armazenamento, mesmo que não tenha sido modificada
