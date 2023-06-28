@@ -16,11 +16,11 @@ server.use(session({
     saveUninitialized: true, //Define se a sessão deve ser salva no armazenamento, mesmo que não tenha sido modificada
     cookie: { maxAge: 10 * 60 * 1000 } //Define as configurações do cookie de sessão. maxAge está definido como 2 minutos (2 * 60 * 1000 milissegundos), especificando o tempo máximo de vida do cookie antes de expirar
 }))
-server.use(passport.initialize())
+server.use(passport.initialize()) 
 server.use(passport.session())
 
 server.use((req,res, next) => {
-    res.locals.user = req.user || null
+    res.locals.user = req.user || null 
     next()
 })
 
