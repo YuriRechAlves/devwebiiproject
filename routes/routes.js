@@ -8,9 +8,7 @@ const routes = express.Router()
 
 //página inicial
 routes.get("/",(req,res)=>{
-    res.status(200).render("pages/index",{
-        pessoaId:1
-    })
+    res.status(200).render("pages/index")
 })
 
 //rotas de produtos
