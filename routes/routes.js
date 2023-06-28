@@ -14,8 +14,8 @@ routes.get("/",(req,res)=>{
 })
 
 //rotas de produtos
-routes.get("/produtos/novo",ProductController.getRegisterPage)
-routes.get("/produtos/:produtoId/update",ProductController.getUpdatePage)
+routes.get("/produtos/novo",admin,ProductController.getRegisterPage)
+routes.get("/produtos/:produtoId/update",admin,ProductController.getUpdatePage)
 
 routes.get("/produtos",autenticado,ProductController.getAll)
 routes.get("/produtos/:produtoId",autenticado,ProductController.getById)
