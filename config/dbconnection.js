@@ -1,8 +1,8 @@
 const sequelize = require('sequelize');
 
-const connection = new sequelize("railway", "root", "7fvBz0oJe3tJLEco0Q9K", {
-  host: "containers-us-west-8.railway.app",
-  port: 5766,
+const connection = new sequelize(process.env.DATABASE, process.env.DB_USER, process.env.DB_PASSWORD, {
+  host: process.env.HOST,
+  port: process.env.DB_PORT,
   dialect: "mysql",
   define: {
     timestamps: false, // para não utilizar campos created_at e updated_at
