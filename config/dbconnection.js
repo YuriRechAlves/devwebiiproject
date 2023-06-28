@@ -1,7 +1,7 @@
 const sequelize = require('sequelize');
 
-const connection = new sequelize("auladevweb", "root", "123456", {
-  host: "localhost",
+const connection = new sequelize("railway", "root", "7fvBz0oJe3tJLEco0Q9K", {
+  host: "containers-us-west-8.railway.app",
   dialect: "mysql",
   define: {
     timestamps: false, // para não utilizar campos created_at e updated_at
