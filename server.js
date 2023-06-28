@@ -9,7 +9,7 @@ const passport = require("passport")
 require("./security/authentication")(passport)
 
 const server = express()
-const PORT = 3000
+const port = process.env.PORT || 3000; 
 
 server.use(session({
     secret: "V3r7r9$7q0d&p1!2$@PwC$3s8LpV",  //Chave secreta utilizada para assinar as sessões, garantindo a integridade e segurança das mesmas   
@@ -45,6 +45,6 @@ server.set("views", path.join(__dirname,"views"))
 server.set("view engine","ejs")
 
 
-server.listen(PORT,"0.0.0.0",()=>{
-    console.log("Servidor executando na porta "+PORT)
+server.listen(port,"0.0.0.0",()=>{
+    console.log("Servidor executando na porta "+port)
 })
