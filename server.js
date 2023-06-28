@@ -45,6 +45,6 @@ server.set("views", path.join(__dirname,"views"))
 server.set("view engine","ejs")
 
 
-server.listen(PORT,()=>{
+server.listen(PORT,"0.0.0.0",()=>{
     console.log("Servidor executando na porta "+PORT)
 })
